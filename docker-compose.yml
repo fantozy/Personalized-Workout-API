@@ -1,0 +1,27 @@
+version: '3.9'
+services:
+  backend-db:
+    container_name: backend-db
+    build: 
+      context: .
+      dockerfile: ./docker/db/Dockerfile
+    volumes:
+      - workoutapidb_storage1:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=fantozy
+      - POSTGRES_PASSWORD=18032003
+    ports:
+      - 5435:5432
+
+  workoutapi:
+    container_name: workapiapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8001:8000
+    depends_on:
+      - backend-db
+volumes:
+  workoutapidb_storage1:
+    external: true
