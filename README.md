@@ -1,8 +1,8 @@
 # Personalized-Workout-API
 ## Setup
-'''bash
+```bash
 docker volume create workoutapidb_storage
-'''
+```
 
 ## Run the project
 
