@@ -14,7 +14,7 @@ services:
       - 5435:5432
 
   workoutapi:
-    container_name: workapiapi
+    container_name: workoutapi
     build:
       context: .
       dockerfile: ./Dockerfile

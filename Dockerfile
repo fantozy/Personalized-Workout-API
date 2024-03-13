@@ -16,5 +16,5 @@ RUN pip3 install -r requirements.txt
 
 COPY . /app
 RUN chmod +x entrypoints/run.sh
-
+RUN python3 manage.py collectstatic --noinput
 ENTRYPOINT [ "bash", "entrypoints/run.sh" ]

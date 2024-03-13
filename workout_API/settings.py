@@ -86,8 +86,8 @@ DATABASES = {
         'NAME': 'fantozy',
         'USER': 'fantozy',
         'PASSWORD': '18032003',
-        'HOST': 'localhost',
-        'PORT': '5435', 
+        'HOST': 'backend-db',
+        'PORT': '5432', 
     }
 }
 
@@ -145,7 +145,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = '/app/static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
